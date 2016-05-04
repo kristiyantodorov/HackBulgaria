@@ -1,0 +1,9 @@
+<p>Id: <%= @lecture.id %></p>
+<p>Name: <%= @lecture.name %></p>
+<p>Text: <%= @lecture.text %></p>
+<p>
+  <%= link_to 'Create task', new_lecture_task_path(@lecture) %>
+  <%= link_to 'Show tasks', lecture_tasks_path(@lecture) %>
+  <%= link_to 'Destroy', url: lectures_path, method: :delete %>
+</p>
+<p><%= link_to 'Back', lectures_path %></p>

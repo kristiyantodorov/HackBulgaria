@@ -1,0 +1,13 @@
+<h2>Showing all solutions</h2>
+
+<u1>
+  <% @solutions.each do |solution| %>
+    <p><%= solution.text %></p>
+    <%= link_to 'Post solution', new_lecture_task_solution_path(params[:lecture_id], params[:task_id]) %>
+    <%= link_to 'Show', lecture_task_solution_path(params[:lecture_id], params[:task_id], solution) %>
+    <%= link_to 'Destroy', lecture_task_solution_path(params[:lecture_id], params[:task_id], solution),
+        method: :delete %>
+  <% end %>
+</u1>
+
+<p><%= link_to 'Back', lecture_task_path(params[:lecture_id], params[:task_id]) %></p>

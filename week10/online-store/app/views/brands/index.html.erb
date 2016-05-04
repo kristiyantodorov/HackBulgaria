@@ -1,0 +1,21 @@
+<title>Brands</title>
+<h1> All brands: </h1>
+<table>
+  <style>
+  table, th, td {
+    width: 400
+  }
+  </style>
+  <tr align=left>
+    <th> ID </th>
+    <th> Name </th>
+    <th> Description </th>
+  </tr>
+  <% @brands.each do |brand| %>
+    <tr align=left>
+      <td><%= brand.id %></td>
+      <td><%= brand.name %></td>
+      <td><%= brand.description %></td>
+    </tr>
+  <% end %>
+</table>

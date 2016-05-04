@@ -1,0 +1,8 @@
+<p>Id: <%= @task.id %></p>
+<p>Name: <%= @task.name %></p>
+<p>Text: <%= @task.description %></p>
+<p>
+  <%= link_to 'Post solution', new_lecture_task_solution_path(params[:lecture_id], params[:id]) %>
+  <%= link_to 'Show solutions', lecture_task_solutions_path(params[:lecture_id], params[:id]) %>
+</p>
+<p><%= link_to 'Back', lectures_path %></p>

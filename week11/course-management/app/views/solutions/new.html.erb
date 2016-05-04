@@ -1,0 +1,11 @@
+<h1>Post solution</h1>
+
+<%= form_for :solution, url: lecture_task_solutions_path(params[:lecture_id], params[:task_id]) do |f| %>
+  <div.class="field">
+    <%= f.label :text %><br>
+    <%= f.text_area :text %><br>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

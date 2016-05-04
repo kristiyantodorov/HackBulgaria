@@ -1,0 +1,13 @@
+<h2>Showing all tasks</h2>
+
+<u1>
+  <% @tasks.each do |task| %>
+    <p><strong><%= task.name %></strong></p>
+    <p><%= task.description %></p>
+    <%= link_to 'Show', lecture_task_path(@lecture, task) %>
+    <%= link_to 'Destroy', lectures_path, method: :delete, data: { confirm: 'Are you sure' } %>
+  <% end %>
+</u1>
+
+<p><%= link_to 'Create task', new_lecture_task_path %></p>
+<p><%= link_to 'Back', lecture_path(params[:lecture_id]) %></p>

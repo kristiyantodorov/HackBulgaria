@@ -1,0 +1,11 @@
+<h2>Showing all lectures</h2>
+
+<u1>
+  <% @lectures.each do |lecture| %>
+    <li><%= lecture.name %></li>
+    <%= link_to 'Show', lecture_path(lecture) %>
+    <%= link_to 'Destroy', lecture_path(lecture), method: :delete, data: { confirm: 'Are you sure' } %>
+  <% end %>
+</u1>
+
+<p><%= link_to 'Create lecture', new_lecture_path %></p>

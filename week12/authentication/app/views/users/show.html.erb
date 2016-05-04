@@ -1,0 +1,5 @@
+<% flash.each do |name, msg| %>
+  <p><%= content_tag flash[:notice], "#{flash[:notice]}", class: :notice %></p>
+<% end %>
+
+<p>Username: <%=@user.username %></p>

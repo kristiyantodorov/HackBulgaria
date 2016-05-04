@@ -1,0 +1,5 @@
+<p><%= @solution.text %></p>
+<p>
+<%= link_to 'Destroy', lecture_task_solution_path(params[:lecture_id], params[:task_id], params[:id]), method: :delete %>
+</p>
+<p><%= link_to 'Back', lecture_task_solutions_path(params[:lecture_id], params[:task_id]) %></p>
